@@ -62,7 +62,7 @@ class MyCustomLayout extends StatelessWidget {
             alignment: Alignment.center,
             children: <Widget>[
               Container(
-                width: 350,
+                width: 360,
                 height: 200,
                 color: const Color.fromARGB(255, 219, 89, 125),
               ),
