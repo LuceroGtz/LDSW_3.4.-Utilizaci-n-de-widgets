@@ -1,79 +1,73 @@
-import 'package:flutter/material.dart';  
+import 'package:flutter/material.dart';
 
-void main() {  
-  runApp(MyApp());  
-}  
-
-class MyApp extends StatelessWidget {  
-  @override  
-  Widget build(BuildContext context) {  
-    return MaterialApp(  
-      title: 'Welcome to Flutter',  
-      home: Scaffold(  
-        appBar: AppBar(  
-          title: Text('Diseño de aplicaciones móviles'),  
-        ),  
-        body: MyCustomLayout(),  
-      ),  
-    );  
-  }  
+void main() {
+  runApp(MyApp());
 }
 
-class MyCustomLayout extends StatelessWidget {
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          Text(
-            'Unidad 3',
-            style: TextStyle(fontSize: 24),
-          ),
-          SizedBox(height: 20), // Espacio entre los textos
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Text(
-                '3.4. Utilización de widgets',
-                style: TextStyle(fontSize: 18),
-              ),
-              SizedBox(width: 10), // Espacio entre los elementos del Row
-              Text(
-                'Primer envío',
-                style: TextStyle(fontSize: 18),
-              ),
-            ],
-          ),
-          SizedBox(height: 20),
-          Container(
-            padding: EdgeInsets.all(10),
-            decoration: BoxDecoration(
-              color: const Color.fromARGB(255, 125, 39, 125),
-              borderRadius: BorderRadius.circular(10),
-            ),
-            child: Text(
-              'Lucero Gutiérrez Robles',
-              style: TextStyle(fontSize: 20, color: Colors.white),
-            ),
-          ),
-          SizedBox(height: 20),
-          Stack(
-            alignment: Alignment.center,
-            children: <Widget>[
-              Container(
-                width: 360,
-                height: 200,
-                color: const Color.fromARGB(255, 219, 89, 125),
-              ),
-              Text(
-                'Profesora: Lotzy Beatriz Fonseca Chiu',
-                style: TextStyle(fontSize: 20, color: Colors.black),
-              ),
-            ],
-          ),
-        ],
+    return MaterialApp(
+      title: 'CLUB',
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('CLUB DE LA PELICULA'),
+          backgroundColor: const Color.fromARGB(255, 120, 119, 119),
+          centerTitle: true,
+        ),
+        body: MyHomePage(),
       ),
     );
   }
 }
+
+class MyHomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+      children: [
+        // Imagen de fondo
+        Container(
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage('assets/cine.jpg'),
+              fit: BoxFit.cover,
+            ),
+          ),
+        ),
+        // Contenido
+        Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              // Mensaje de bienvenida en tres renglones
+              Text(
+                'Bienvenido\nal club\nde la película',
+                style: TextStyle(
+                  fontSize: 24,
+                  color: const Color.fromARGB(255, 65, 34, 34),
+                  fontWeight: FontWeight.bold,
+                  height: 1.5,
+                ),
+                textAlign: TextAlign.center,
+              ),
+              SizedBox(height: 50),
+              // Botón para entrar
+              ElevatedButton(
+                onPressed: () {
+                  // Acción del botón
+                },
+                child: Text('Entrar'),
+                style: ElevatedButton.styleFrom(
+                  padding: EdgeInsets.symmetric(horizontal: 40, vertical: 15),
+                  textStyle: TextStyle(fontSize: 18),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ],
+    );
+  }
+}
+
