@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "440937164357",
+    "project_id": "aplicaciones-moviles-unidad-3",
+    "storage_bucket": "aplicaciones-moviles-unidad-3.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:440937164357:android:6ad9f061007b5416803d2c",
+        "android_client_info": {
+          "package_name": "com.aplicacionesmoviles.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbbgH0aHkor6Sya3tKb593k7CRpmXngOA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
